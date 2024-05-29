@@ -13,7 +13,9 @@ class DcComicController extends Controller
     public function index()
     {
         //funzione della pagina index
-        return view('dc_comics.index');
+
+        $comics = DcComic::all();
+        return view('dc_comics.index', compact('comics'));
     }
 
     /**
