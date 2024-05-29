@@ -1,3 +1,12 @@
 <header>
-    
+    <div class="container">
+        <nav class="d-flex justify-content-between pt-4">
+            <h3>LOGO</h3>
+            <ul>
+                <li>
+                    <a href="">Home</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
