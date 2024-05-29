@@ -5,7 +5,10 @@
 @section('content')
 
 <div class="container">
-    <h1>Fumetti DC</h1>
+    <div class="d-flex justify-content-between align-items-center">
+        <h1>Fumetti DC</h1>
+        <a href="{{ route('dc_comics.create') }}" class="btn btn-secondary">Nuovo Fumetto</a>
+    </div>    
 </div>
 <div class="container">
     <div class="row row-cols-4">

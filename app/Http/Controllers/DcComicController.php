@@ -23,7 +23,8 @@ class DcComicController extends Controller
      */
     public function create()
     {
-        //
+        // funzione create
+        return view('dc_comics.create');
     }
 
     /**
