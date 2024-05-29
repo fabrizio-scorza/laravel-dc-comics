@@ -4,8 +4,11 @@
             <h3>LOGO</h3>
             <ul>
                 <li>
-                    <a href="">Home</a>
+                    <a href="/">Home</a>                    
                 </li>
+                <li>
+                    <a href="{{route('dc_comics.index')}}">DC-Comics</a>
+                </li>                
             </ul>
         </nav>
     </div>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DcComicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+
+// DC-Comic CRUD
+// index
+Route::get('/dc_comics', [DcComicController::class, 'index'])->name('dc_comics.index');
