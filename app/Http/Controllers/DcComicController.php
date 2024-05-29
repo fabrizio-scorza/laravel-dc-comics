@@ -33,6 +33,7 @@ class DcComicController extends Controller
     public function store(Request $request)
     {
         //
+        dump('reindizzamento di store');
     }
 
     /**

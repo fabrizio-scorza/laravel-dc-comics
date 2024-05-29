@@ -25,3 +25,5 @@ Route::get('/dc_comics', [DcComicController::class, 'index'])->name('dc_comics.i
 Route::get('/dc_comics/create', [DcComicController::class, 'create'])->name('dc_comics.create');
 
 Route::get('/dc_comics/{comic}', [DcComicController::class, 'show'])->name('dc_comics.show');
+
+Route::post('/dc_comics', [DcComicController::class, 'store'])->name('dc_comics.store');

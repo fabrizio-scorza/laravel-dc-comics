@@ -9,7 +9,7 @@
     <p>inserisci i dati richiesti per creare un nuovo fumetto</p>
 </div>
 <div class="container">
-    <form action="" method="POST">
+    <form action="{{ route('dc_comics.store')}}" method="POST">
         @csrf
 
         <div class="mb-4">
