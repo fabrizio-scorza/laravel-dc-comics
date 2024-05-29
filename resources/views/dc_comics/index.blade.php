@@ -12,13 +12,15 @@
         @foreach ($comics as $comic)
             <div class="col">
                 <div class="card">
-                    <img src="{{$comic->thumb}}" height="350" width="250" alt="" class="card-img-top">
+                    <img src="{{ $comic->thumb }}" height="350" width="250" alt="" class="card-img-top">
                     <div class="card-body">
-                        <h5 class="card-title">Titolo: {{$comic->title}}</h5>
-                        <h5 class="card-subtitle">Serie: {{$comic->series}}</h5>
+                        <a href="{{ route('dc_comics.show', $comic) }}">
+                            <h5 class="card-title">Titolo: {{ $comic->title }}</h5>
+                        </a>
+                        <h5 class="card-subtitle">Serie: {{ $comic->series }}</h5>
                         <p class="card-text">
-                            <span>Prezzo: {{$comic->price}}</span>
-                            <span>Venduto il: {{$comic->sale_date}}</span>
+                            <span>Prezzo: {{ $comic->price }}</span>
+                            <span>Venduto il: {{ $comic->sale_date }}</span>
                         </p>
                     </div>
                 </div>
