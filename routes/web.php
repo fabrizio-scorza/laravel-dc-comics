@@ -21,3 +21,4 @@ Route::get('/', function () {
 // DC-Comic CRUD
 // index
 Route::get('/dc_comics', [DcComicController::class, 'index'])->name('dc_comics.index');
+Route::get('/dc_comics/{comic}', [DcComicController::class, 'show'])->name('dc_comics.show');
