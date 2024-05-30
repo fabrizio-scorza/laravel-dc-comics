@@ -61,9 +61,10 @@ class DcComicController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(DcComic $comic)
     {
-        //
+        //metodo edit 
+        return view('dc_comics.edit', compact('comic'));
     }
 
     /**
