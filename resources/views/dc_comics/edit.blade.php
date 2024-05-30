@@ -43,7 +43,7 @@
             <label for="type">Tipo di articolo</label>
             <input type="text" name="type" class="form-control" id="type" placeholder="comic books" value="{{ $comic->type }}">
         </div>
-        <button class="btn btn-secondary">Aggiorna</button>      
+        <button type="submit" class="btn btn-secondary">Aggiorna</button>      
     </form>
 </div>
     

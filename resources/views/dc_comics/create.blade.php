@@ -40,7 +40,7 @@
             <label for="type">Tipo di articolo</label>
             <input type="text" name="type" class="form-control" id="type" placeholder="comic books">
         </div>
-        <button class="btn btn-secondary">Crea</button>      
+        <button type="submit" class="btn btn-secondary">Crea</button>      
     </form>
 </div>
     

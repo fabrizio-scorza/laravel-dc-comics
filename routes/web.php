@@ -31,3 +31,5 @@ Route::post('/dc_comics', [DcComicController::class, 'store'])->name('dc_comics.
 Route::get('/dc_comics/{comic}/edit', [DcComicController::class, 'edit'])->name('dc_comics.edit');
 
 Route::put('/dc_comics/{comic}', [DcComicController::class, 'update'])->name('dc_comics.update');
+
+Route::delete('dc_comics/{comic}', [DcComicController::class, 'destroy'])->name('dc_comics.destroy');
