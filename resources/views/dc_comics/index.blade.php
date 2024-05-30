@@ -25,6 +25,9 @@
                             <span>Prezzo: {{ $comic->price }}</span>
                             <span> Venduto il: {{ $comic->sale_date }}</span>
                         </p>
+                        <div>
+                            <a href="{{ route('dc_comics.edit', $comic) }}">Modifica</a>
+                        </div>
                     </div>
                 </div>
             </div>  
