@@ -32,8 +32,21 @@ class DcComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        dump('reindizzamento di store');
+        //metodo store
+        $create_data = $request->all();
+        $dc_comic = new DcComic();
+
+        $dc_comic->title = $create_data['title'];
+        $dc_comic->description = $create_data['description'];
+        $dc_comic->thumb = $create_data['thumb'];
+        $dc_comic->price = trim($create_data['price'], "$");
+        $dc_comic->series = $create_data['series'];
+        $dc_comic->sale_date = $create_data['sale_date'];
+        $dc_comic->type = $create_data['type'];
+
+        $dc_comic->save();
+
+        return to_route('dc_comics.show', $dc_comic);
     }
 
     /**
