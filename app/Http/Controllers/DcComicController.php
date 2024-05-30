@@ -34,17 +34,9 @@ class DcComicController extends Controller
     {
         //metodo store
         $create_data = $request->all();
-        $dc_comic = new DcComic();
+        $create_data['price'] = floatval(trim(str_replace(',', '.', $create_data['price']), "$"));
 
-        $dc_comic->title = $create_data['title'];
-        $dc_comic->description = $create_data['description'];
-        $dc_comic->thumb = $create_data['thumb'];
-        $dc_comic->price = trim($create_data['price'], "$");
-        $dc_comic->series = $create_data['series'];
-        $dc_comic->sale_date = $create_data['sale_date'];
-        $dc_comic->type = $create_data['type'];
-
-        $dc_comic->save();
+        $dc_comic = DcComic::create($create_data);
 
         return to_route('dc_comics.show', $dc_comic);
     }
@@ -70,9 +62,15 @@ class DcComicController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, DcComic $comic)
     {
-        //
+        //metodo update
+        $update_data = $request->all();
+        $update_data['price'] = floatval(trim(str_replace(',', '.', $update_data['price']), "$"));
+        $comic->fill($update_data);
+        $comic->save();
+
+        return to_route('dc_comics.show', $comic);
     }
 
     /**

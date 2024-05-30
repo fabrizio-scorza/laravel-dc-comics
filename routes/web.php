@@ -29,3 +29,5 @@ Route::get('/dc_comics/{comic}', [DcComicController::class, 'show'])->name('dc_c
 Route::post('/dc_comics', [DcComicController::class, 'store'])->name('dc_comics.store');
 
 Route::get('/dc_comics/{comic}/edit', [DcComicController::class, 'edit'])->name('dc_comics.edit');
+
+Route::put('/dc_comics/{comic}', [DcComicController::class, 'update'])->name('dc_comics.update');

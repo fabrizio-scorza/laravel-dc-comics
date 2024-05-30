@@ -9,8 +9,9 @@
     <p>modifica i campi che desideri aggiornare di questo Fumetto</p>
 </div>
 <div class="container">
-    <form action="{{ route('dc_comics.store',$comic) }}" method="POST">
+    <form action="{{ route('dc_comics.update',$comic) }}" method="POST">
         @csrf
+        @method('PUT')
 
         <div class="mb-4">
             <label for="title">Titolo</label>
